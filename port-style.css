@@ -1,0 +1,388 @@
+
+/* VARIABLES */
+
+:root{
+    --primary: rgb(65, 0, 31);
+    --secondary:  rgba(118, 111, 111, 0.195);
+}
+/* RESET */
+
+a{
+    text-decoration: none;
+    color: aliceblue;
+}
+li{
+    list-style: none;
+}
+body,p,ul,li,a{
+    margin: 0;
+    padding: 0;
+}
+/* BASE STYLE  */
+
+body{
+    background-color: black;
+    color: aliceblue;
+    overflow-x: hidden;
+    font-family:'Montserrat', sans-serif;
+    font-size: 20px;
+    }
+    .btn{
+    background:none;
+    border: 2px solid white;
+    color: white;
+    padding: 6px 12px;
+    display: inline-block;
+    border-radius: 20px;
+    transition: 0.2s ease-in-out;
+    margin: 25px 0px;
+}
+.btn:hover{
+    background-color: aliceblue;
+    color: black;
+    font-weight: 700;
+}
+
+/* FONTS  */
+
+h1, h3{
+    font-size: 1.3em;
+}
+h2{
+    font-size: 2em;
+}
+h3{
+    font-size: 1.1em;
+}
+h4{
+    font-size: 0.8em;
+}
+
+/* IMAGE STYLING */
+#platform img{
+    width: 60%;
+}
+
+.social img{
+    
+    max-width: 30px;
+}
+
+
+#projs img{
+    max-width: 100%;
+    border-radius: 20px;
+    border: 1px solid rgba(144, 143, 143, 0.23);
+    box-shadow: 0px 0px 15px rgba(128, 128, 128, 0.212);
+}
+
+
+#watermark{
+    width: 90%;
+}
+
+
+
+
+/* MOBILE STYLES  */
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(8,1fr);
+    grid-gap: 10px;
+}
+
+.site-nav{
+    background-color: black;
+    box-shadow: 0px 0px 10px rgba(163, 163, 162, 0.159);
+    margin: 0px;
+    padding-left: 5px;
+}
+.site-nav img{
+    margin-left: -10px;
+    grid-column: 1/4;
+}
+.site-nav ul{
+    display: none;
+}
+.welcome-msg{
+    grid-column: 1/9;
+    grid-row: 2;
+    padding-bottom: 20px;
+    margin: -50px 20px;
+}
+#welcome{
+    padding: 20px 0px 20px 0px;
+}
+
+.proj-grid{
+    
+    
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 30px;
+    margin: 30px;
+    text-align: center;
+    
+}
+
+.proj-grid a{
+    grid-column: 1/9;
+    padding: 20px;
+    background-color: rgba(118, 111, 111, 0.195);
+    border: 1px solid rgba(144, 143, 143, 0.23);
+    box-shadow: 0px 0px 15px black;
+    border-radius: 20px;
+    text-align: center;
+    transition: 0.2s ease-in-out;
+}
+
+#projs h3{
+    text-align: center;
+}
+
+#platform{
+    padding: 20px;
+    margin: 20px 0px;
+}
+#platform h3{
+    text-align: center;
+}
+#platform li{
+    align-items: center;
+    text-align: center;
+    padding: 0px 0px;
+    grid-column: span 2;
+    padding-bottom: 0px;
+    padding-top: 20px;
+    background-color: var(--secondary);
+    border-radius: 10px;
+}
+.site-nav a{
+transition: 0.5s ease-in-out;
+}
+
+footer{
+    background-color: var(--secondary);
+
+}
+footer .copyright{
+    grid-column: 1/4;
+    margin: 20px;
+    font-size: 0.6em;
+    align-self: center;
+    text-align: center;
+}
+.social{
+    grid-column: 4/9;
+    display: flex;
+    margin: 0px 10px;
+    margin-bottom: 10px;
+    justify-content: flex-end;
+    
+}
+.social li{
+    margin: 10px;
+    align-self: center;
+    transition: 0.5s ease-in-out;
+}
+
+/* SMALL TABLETS */
+@media screen and (min-width:625px){
+
+#watermark{
+        width: 145px;
+    }
+    .proj-grid a{
+       
+    padding: 19px 5px;
+    grid-column: span 1;
+   }
+   
+#projs img{
+    max-width: 90%;
+    width: 250px;
+    align-self: center;
+    margin: 0px 0px;    
+
+}
+.grid{
+    grid-gap:10px;
+}
+
+#platform img{
+    width: 15%;
+}
+
+#platform li{
+    grid-column: span 4;
+    
+}
+#platform{
+    margin: 10px 30px;
+}
+
+#platform ul{
+    margin-top: 50px;
+}
+
+footer .copyright{
+    font-size: 1em;
+}
+.social img{
+    width: 70px;
+}
+}
+
+/* LARGE TABLETS AND LAPTOPS */
+
+
+@media screen and (min-width:960px){
+    body{
+        font-size: 18px;
+    }
+
+    .grid{
+        box-sizing: border-box;
+        max-width: 1020px;
+        width: 100%;
+        margin: 0px auto;
+    }
+    .leading{
+        margin: 20px;
+    }
+    h2{
+        font-size: 5em;
+        font-weight: 900;
+        margin: 50px 20px;
+        opacity: 0;
+    }
+    .site-nav{
+        padding: 0px 20px;
+    }
+
+    .site-nav ul{
+        display: flex;
+        grid-column: 6/9;
+        justify-content: flex-end;
+    }
+    .site-nav ul li{
+        padding: 20px;
+        align-self: center;
+    }
+    .welcome-msg{
+        align-self: center;
+    }
+    .btncont{
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+        padding: 10px;
+        width: 100%;
+    }
+    .btn{
+        padding: 10px;
+        width: 20%;
+        text-align: center;
+        margin-bottom:30px ;
+    }
+
+    h2{
+        animation: slide-right 1s 0.5s 1 forwards;
+    }
+    @keyframes slide-right {
+        from{transform: translateX(-100px);
+            opacity: 0;
+        }
+        to{
+            transform: translateX(0px);
+            opacity: 1;
+        }
+        
+    }
+
+    .proj-grid{
+        padding: 0px 10px;
+    }
+
+    #projs h3{
+        margin-bottom: 40px;
+    }
+
+    .social{
+        margin-right: 100px;
+    }
+
+}
+
+/* DESKTOPS */
+
+@media screen and (min-width:1200px) {
+    
+    #welcome, #projs, #platform, footer {
+        padding: 50px;
+    }
+    .grid{
+        grid-gap: 20px;
+        box-sizing: border-box;
+        max-width: 1620px;
+        width: 100%;
+        margin: 0px auto;}
+    .proj-grid a:nth-child(1){
+        grid-column: 1/2;
+        padding: 40px;
+    }
+    .proj-grid a:nth-child(2){
+        grid-column: 2/3;
+        padding: 40px;
+    }
+    .proj-grid a:nth-child(3){
+        grid-column: 3/4;
+        padding: 40px;
+    }
+    #projs h3{
+        margin-bottom: 100px;
+    }
+    #platform h3{
+        margin-bottom: 100px;
+    }
+    #platform li{
+        grid-column: span 2;
+        margin-bottom: 100px;
+    }
+
+}
+
+
+/* HOVER  */
+
+.site-nav a:hover{
+    color: aqua;
+    }
+
+.proj-grid a:hover{
+    transform: scale(1.05);
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.268);
+}
+#yt:hover{
+    filter: opacity(1) drop-shadow(0 0 10px red);
+}
+#ig:hover{
+    filter: opacity(1) drop-shadow(0 0 10px rgb(255, 0, 166));
+}
+#linkdn:hover{
+    filter: opacity(1) drop-shadow(0 0 10px rgb(0, 110, 255));
+}
+#spotify:hover{
+    filter: opacity(1) drop-shadow(0 0 10px rgb(0, 255, 94));
+}
+#yt{
+    transition: 0.2s ease-in-out;
+}
+#ig{
+    transition: 0.2s ease-in-out;
+}
+#linkdn{
+    transition: 0.2s ease-in-out;
+}#spotify{
+    transition: 0.2s ease-in-out;
+}
